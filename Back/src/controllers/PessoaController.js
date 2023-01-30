@@ -18,7 +18,7 @@ class PessoaController {
       res.status(400).json({
         errorsFields: err.errors ? Object.keys(err.errors).map(element=>element) : 'CPF',
         errorsName: err.errors ? Object.values(err.errors).map(element=> element.name) : 'Duplicate Key',
-        errorsMessage: err.errors ? Object.values(err.errors).map(element=> element.message): 'O CPF deve ser único',
+        errorsMessage: err.errors ? Object.values(err.errors).map(element=> element.message): 'O CPF já existe',
       })    
     }
   };
