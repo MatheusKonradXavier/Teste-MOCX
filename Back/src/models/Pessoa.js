@@ -5,15 +5,15 @@ const Pessoa = mongoose.model(
   new mongoose.Schema({
       nome : {
         type : String,
-        required : [true, 'É NECESSÁRIO PREENCHER O CAMPO NOME']
+        required : [true, 'É necessário preencher o campo nome']
       },
       data_nascimento : {
         type : Date,
-        required : [true, 'É NECESSÁRIO PREENCHER O CAMPO DATA NASCIMENTO']
+        required : [true, 'É necessário preencher o campo data nascimento']
       },
       CPF : {
         type : Number,
-        required : [true, 'É NECESSÁRIO PREENCHER O CAMPO CPF'],
+        required : [true, 'É necessário preencher o campo CPF'],
         unique : true,
         immutable: true,
         validate: {
